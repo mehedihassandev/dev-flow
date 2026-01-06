@@ -1,3 +1,5 @@
+import { openRecorderWindow } from "../utils/window";
+
 // Background service worker for MV3
 
 chrome.runtime.onInstalled.addListener(
@@ -62,5 +64,12 @@ chrome.runtime.onMessage.addListener(
         return false;
     }
 );
+
+// Listen for commands
+chrome.commands.onCommand.addListener(async (command) => {
+    if (command === "open_recorder") {
+        await openRecorderWindow();
+    }
+});
 
 export {};

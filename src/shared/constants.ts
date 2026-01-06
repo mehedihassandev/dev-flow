@@ -129,4 +129,9 @@ export const TOOL_COLORS: Record<
         text: "text-rose-400",
         border: "border-rose-500/30",
     },
+    home: {
+        bg: "bg-indigo-500/20",
+        text: "text-indigo-400",
+        border: "border-indigo-500/30",
+    },
 };

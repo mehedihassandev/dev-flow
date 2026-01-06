@@ -12,6 +12,7 @@ import {
     LoremGenerator,
     ScreenRecorder,
 } from "./components/tools";
+import { Home } from "./components/Home";
 
 export default function App() {
     const { activeTab, setActiveTab } = useAppStore();
@@ -34,8 +35,10 @@ export default function App() {
                 return <LoremGenerator />;
             case "recorder":
                 return <ScreenRecorder />;
+            case "home":
+                return <Home />;
             default:
-                return <ColorTool />;
+                return <Home />;
         }
     };
 

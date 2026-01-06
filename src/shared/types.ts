@@ -15,7 +15,8 @@ export type ToolId =
     | "regex"
     | "generator"
     | "lorem"
-    | "recorder";
+    | "recorder"
+    | "home";
 
 export interface Tool {
     id: ToolId;

@@ -112,7 +112,6 @@ export function RegexTester() {
 
     return (
         <div className="h-full flex flex-col">
-            // Header
             <h2 className="text-sm font-medium text-text-primary mb-3">
                 Regex Tester
             </h2>

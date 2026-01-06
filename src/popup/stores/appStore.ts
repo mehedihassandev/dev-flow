@@ -10,7 +10,7 @@ interface AppState {
 }
 
 export const useAppStore = create<AppState>((set) => ({
-    activeTab: "colors",
+    activeTab: "home",
     setActiveTab: (tab) => set({ activeTab: tab }),
     theme: "dark",
     setTheme: (theme) => set({ theme }),

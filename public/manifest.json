@@ -18,6 +18,7 @@
     "type": "module"
   },
   "permissions": [
+    "desktopCapture",
     "storage",
     "activeTab",
     "notifications",
@@ -35,6 +36,13 @@
         "mac": "Command+Shift+D"
       },
       "description": "Open DevFlow"
+    },
+    "open_recorder": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Open Screen Recorder"
     }
   }
 }
