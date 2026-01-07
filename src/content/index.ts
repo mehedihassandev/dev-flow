@@ -1,8 +1,8 @@
-// Content script placeholder
-// This script runs in the context of web pages
+// Content script - runs in the context of web pages
+// This script provides font detection functionality
 
-console.log("All-in-One Extension content script loaded");
+import "./fontDetector";
 
-// Future: Add page inspection, command palette, etc.
+console.log("DevFlow content script loaded");
 
 export {};

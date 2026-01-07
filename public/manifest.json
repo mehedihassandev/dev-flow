@@ -23,7 +23,8 @@
     "storage",
     "activeTab",
     "notifications",
-    "sidePanel"
+    "sidePanel",
+    "scripting"
   ],
   "icons": {
     "16": "icons/16.png",
@@ -45,5 +46,16 @@
       },
       "description": "Open Screen Recorder"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
 }

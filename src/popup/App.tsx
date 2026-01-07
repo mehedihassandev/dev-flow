@@ -12,6 +12,7 @@ import {
     LoremGenerator,
     ScreenRecorder,
     SessionManager,
+    WhatFont,
 } from "./components/tools";
 import { Home } from "./components/Home";
 
@@ -38,6 +39,8 @@ export default function App() {
                 return <ScreenRecorder />;
             case "sessions":
                 return <SessionManager />;
+            case "whatfont":
+                return <WhatFont />;
             case "home":
                 return <Home />;
             default:

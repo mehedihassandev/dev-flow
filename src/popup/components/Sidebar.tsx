@@ -12,6 +12,7 @@ type IconName =
     | "text"
     | "video"
     | "folders"
+    | "type"
     | "home";
 
 interface SidebarProps {
@@ -31,6 +32,7 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
             lorem: "text",
             sessions: "folders",
             recorder: "video",
+            whatfont: "type",
             home: "home",
         };
         return iconMap[toolId];

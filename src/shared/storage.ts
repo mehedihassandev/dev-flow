@@ -7,6 +7,7 @@ import type {
     SavedColor,
     ColorPalette,
     TimerState,
+    SavedFont,
 } from "./types";
 import { STORAGE_KEYS, DEFAULT_SETTINGS } from "./constants";
 
@@ -127,6 +128,26 @@ export async function getTimerState(): Promise<TimerState | undefined> {
 
 export async function saveTimerState(state: TimerState): Promise<void> {
     await setStorage("timerState", state);
+}
+
+// Fonts
+export async function getFonts(): Promise<SavedFont[]> {
+    const fonts = await getStorage("fonts");
+    return fonts ?? [];
+}
+
+export async function saveFont(font: SavedFont): Promise<void> {
+    const fonts = await getFonts();
+    fonts.unshift(font);
+    await setStorage("fonts", fonts.slice(0, 50)); // Keep max 50 fonts
+}
+
+export async function deleteFont(id: string): Promise<void> {
+    const fonts = await getFonts();
+    await setStorage(
+        "fonts",
+        fonts.filter((f) => f.id !== id)
+    );
 }
 
 /**

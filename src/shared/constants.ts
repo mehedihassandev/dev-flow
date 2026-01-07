@@ -15,6 +15,7 @@ export const DEFAULT_SETTINGS: Settings = {
         "generator",
         "lorem",
         "sessions",
+        "whatfont",
     ],
     pomodoroWorkMinutes: 25,
     pomodoroBreakMinutes: 5,
@@ -92,6 +93,13 @@ export const TOOLS: Tool[] = [
         icon: "folders",
         color: "purple",
     },
+    {
+        id: "whatfont",
+        name: "WhatFont",
+        description: "Identify fonts on web pages",
+        icon: "type",
+        color: "cyan",
+    },
 ];
 
 export const TOOL_COLORS: Record<
@@ -142,6 +150,11 @@ export const TOOL_COLORS: Record<
         bg: "bg-purple-500/20",
         text: "text-purple-400",
         border: "border-purple-500/30",
+    },
+    whatfont: {
+        bg: "bg-cyan-500/20",
+        text: "text-cyan-400",
+        border: "border-cyan-500/30",
     },
     home: {
         bg: "bg-indigo-500/20",

@@ -17,6 +17,7 @@ export type ToolId =
     | "lorem"
     | "recorder"
     | "sessions"
+    | "whatfont"
     | "home";
 
 export interface Tool {
@@ -50,6 +51,16 @@ export interface TimerState {
     sessionsCompleted: number;
 }
 
+// Font Types
+export interface SavedFont {
+    id: string;
+    family: string;
+    size: string;
+    weight: string;
+    style: string;
+    createdAt: number;
+}
+
 // Session Types
 export interface SavedTab {
     id: string;
@@ -75,4 +86,5 @@ export interface StorageData {
     palettes: ColorPalette[];
     timerState: TimerState;
     sessions: Session[];
+    fonts: SavedFont[];
 }
