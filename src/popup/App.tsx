@@ -11,6 +11,7 @@ import {
     GeneratorTool,
     LoremGenerator,
     ScreenRecorder,
+    SessionManager,
 } from "./components/tools";
 import { Home } from "./components/Home";
 
@@ -35,6 +36,8 @@ export default function App() {
                 return <LoremGenerator />;
             case "recorder":
                 return <ScreenRecorder />;
+            case "sessions":
+                return <SessionManager />;
             case "home":
                 return <Home />;
             default:

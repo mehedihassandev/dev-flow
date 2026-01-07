@@ -1,6 +1,9 @@
 import { openRecorderWindow } from "../utils/window";
+import { initializeCrashRecovery } from "../services/crashRecovery";
 
 // Background service worker for MV3
+// Initialize crash recovery system
+initializeCrashRecovery();
 
 chrome.runtime.onInstalled.addListener(
     (details: chrome.runtime.InstalledDetails) => {
@@ -18,6 +21,7 @@ chrome.runtime.onInstalled.addListener(
                         "regex",
                         "generator",
                         "lorem",
+                        "sessions",
                     ],
                     pomodoroWorkMinutes: 25,
                     pomodoroBreakMinutes: 5,

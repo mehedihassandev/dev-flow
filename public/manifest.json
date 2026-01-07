@@ -18,6 +18,7 @@
     "type": "module"
   },
   "permissions": [
+    "tabs",
     "desktopCapture",
     "storage",
     "activeTab",

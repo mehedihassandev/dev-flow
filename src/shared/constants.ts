@@ -14,6 +14,7 @@ export const DEFAULT_SETTINGS: Settings = {
         "regex",
         "generator",
         "lorem",
+        "sessions",
     ],
     pomodoroWorkMinutes: 25,
     pomodoroBreakMinutes: 5,
@@ -24,6 +25,7 @@ export const STORAGE_KEYS = {
     COLORS: "colors",
     PALETTES: "palettes",
     TIMER_STATE: "timerState",
+    SESSIONS: "sessions",
 } as const;
 
 export const TOOLS: Tool[] = [
@@ -83,6 +85,13 @@ export const TOOLS: Tool[] = [
         icon: "video",
         color: "rose",
     },
+    {
+        id: "sessions",
+        name: "Sessions",
+        description: "Tab & session manager",
+        icon: "folders",
+        color: "purple",
+    },
 ];
 
 export const TOOL_COLORS: Record<
@@ -128,6 +137,11 @@ export const TOOL_COLORS: Record<
         bg: "bg-rose-500/20",
         text: "text-rose-400",
         border: "border-rose-500/30",
+    },
+    sessions: {
+        bg: "bg-purple-500/20",
+        text: "text-purple-400",
+        border: "border-purple-500/30",
     },
     home: {
         bg: "bg-indigo-500/20",

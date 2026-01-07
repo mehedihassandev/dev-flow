@@ -11,6 +11,7 @@ type IconName =
     | "hash"
     | "text"
     | "video"
+    | "folders"
     | "home";
 
 interface SidebarProps {
@@ -28,7 +29,7 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
             regex: "regex",
             generator: "hash",
             lorem: "text",
-
+            sessions: "folders",
             recorder: "video",
             home: "home",
         };

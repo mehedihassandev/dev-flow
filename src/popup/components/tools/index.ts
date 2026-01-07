@@ -6,3 +6,4 @@ export { RegexTester } from "./RegexTester";
 export { GeneratorTool } from "./GeneratorTool";
 export { LoremGenerator } from "./LoremGenerator";
 export { ScreenRecorder } from "./ScreenRecorder";
+export { default as SessionManager } from "./SessionManager";

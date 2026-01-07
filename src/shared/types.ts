@@ -16,6 +16,7 @@ export type ToolId =
     | "generator"
     | "lorem"
     | "recorder"
+    | "sessions"
     | "home";
 
 export interface Tool {
@@ -49,10 +50,29 @@ export interface TimerState {
     sessionsCompleted: number;
 }
 
+// Session Types
+export interface SavedTab {
+    id: string;
+    url: string;
+    title: string;
+    favIconUrl?: string;
+    windowId: number;
+    index: number;
+}
+
+export interface Session {
+    id: string;
+    name: string;
+    tabs: SavedTab[];
+    createdAt: number;
+    updatedAt: number;
+}
+
 // Storage Types
 export interface StorageData {
     settings: Settings;
     colors: SavedColor[];
     palettes: ColorPalette[];
     timerState: TimerState;
+    sessions: Session[];
 }
